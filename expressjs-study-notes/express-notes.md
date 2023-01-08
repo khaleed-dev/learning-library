@@ -1,11 +1,8 @@
 # Hello ExpressJS.
 
-[use-link]: #use-section 
-[post-link]: #post-section
+- [`app.use`][app-use] - [`app.post`][post.link]
 
-- [`app.use`][use-link] - [`app.post`][post-link]
-
-- ## `app.use` [use-link]
+- ## `app.use`
 This method mounts the specified middleware function or functions at the specified path. The middleware function is executed when the base of the requested `path` matches path. For example:
 ```js
 app.use('/hello', (req, res, next) => {
@@ -14,7 +11,7 @@ app.use('/hello', (req, res, next) => {
 });
 
 ```
-- ## `app.post` [post-link]
+- ## `app.post`
 This method is used to handle HTTP POST requests sent to the specified path. It is equivalent to calling `app.use` with the `POST` method and the specified path. The middleware function is executed when the base of the requested path matches `path` and the request method is `POST`. For example:
 ```js
 app.post('/login', (req, res) => {
