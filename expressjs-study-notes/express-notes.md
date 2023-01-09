@@ -15,8 +15,25 @@
     - Make the changes to the req/res objects
     - end response cycle
     - call next middleware in the stack
-    
-# 
+
+# You will often use Express for:
+- Static file servers: Express.js can be used to serve static files, such as HTML, CSS, JavaScript, and images, to clients. This is often used to build simple static websites or to serve the frontend of a web application.
+
+- Render templates: Express.js has built-in support for rendering templates, which allows you to generate dynamic HTML on the server and serve it to clients. This is often used to build dynamic web applications that rely on server-side rendering.
+
+- JSON APIs: Express.js can be used to build APIs that return data in JSON format, which can be easily consumed by frontend applications. This is often used to build modern, client-side web applications that rely on data from a backend API.
+
+- Serving content in different languages or formats: Express.js can be used to serve content in different languages or formats based on the client's preferences or the request parameters.
+
+- Redirecting requests: Express.js can be used to redirect requests from one URL to another, either temporarily or permanently. This is often used to implement custom URLs or to handle legacy URLs.
+
+- Handling form submissions: Express.js can be used to handle form submissions and process the data submitted by the user. This is often used to build simple web applications or to integrate with third-party APIs.
+
+- Implementing authentication and authorization: Express.js can be used to implement authentication and authorization mechanisms, such as login and logout functionality, to control access to certain parts of an application.
+
+and much more like: Caching responses, Compressing responses, Serving static files from multiple directories, Implementing rate limiting, Implementing security measures ... 
+
+# Express Properties and methods:
 ## Application Object: 
 __The app object conventionally denotes the Express application. Create it by calling the top-level express() function exported by the Express module:__
 
@@ -29,13 +46,13 @@ _application object includes these methods_
 get, post, put, delete.
 set, use, rote, render, listen, engine ...
 
-- ### `app.set(setting, value)`:
+### `app.set(setting, value)`:
 This method sets the value for a specific setting. For example:
 ```js
 app.set('view engine', 'ejs');
 ```
 
-- ### `app.get(setting)`:
+### `app.get(setting)`:
 This method gets the value for a specific setting. For example:
 ```js
 app.set('view engine', 'ejs')
@@ -43,7 +60,7 @@ app.get('view engine');
 ```
 ---------------------------------------------------------------------------------
 
-- ### `app.get(path, callback [, callback ...])`:
+### `app.get(path, callback [, callback ...])`:
 Routes HTTP GET requests to the specified path with the specified callback functions. For example:
 ```js
 app.get('/', (req, res) => {
@@ -56,7 +73,7 @@ app.get('/', (req, res) => {
 ```
 ---------------------------------------------------------------------------------
 
-- ### `app.use(path, middleware)`:
+### `app.use(path, middleware)`:
 This method mounts the specified middleware function or functions at the specified path. The middleware function is executed when the base of the requested path matches path. For example:
 ```js
 app.use('/hello', (req, res, next) => {
@@ -65,12 +82,18 @@ next();
 });
 ```
 
-- ### app.listen(port[, hostname][, backlog][, callback]):
+example 2:
+```js
+app.use(express.static(path.join(__dirname, "public"), {index: "poiler.html"} ));
+```
+
+### app.listen(port[, hostname][, backlog][, callback]):
 This method binds and listens for connections on the specified host and port. It is equivalent to the following:
 ```js
 const server = http.createServer(app);
 server.listen(port[, hostname][, backlog][, callback]);
-    For example:
+
+For example:
 app.listen(3000, () => {
     console.log('Listening on port 3000');
 });
@@ -124,6 +147,12 @@ _Response object has these properties:_
 res.app, res.headersSent, res.locals
 _Response object include these methods:_
 res.redirect(), json(), get(), send(), sendFile(), & alot more ...
+_You can send responses like_
+- json -> res.json()
+- a file -> res.sendFile()
+- rendering template engine -> res.render() 
+
+__ex:1__
 
 ```js
 // redirect()
@@ -134,6 +163,7 @@ res.status(404).send('Sorry, we cannot find that!')
 ```
 
 ## examples:
+__for all examples check out the pills folders__
 
 ### basic server syntax: 
 ```js
@@ -149,5 +179,4 @@ app.get('/', function(req,res) {
 
 //listen on a port
 app.listen(5000);
-
 ```
