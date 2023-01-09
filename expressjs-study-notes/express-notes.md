@@ -2,7 +2,7 @@
     - Fast unopinionated and minimalist web framework for NodeJS.
     - Server-side / backend framework.
     - Great to use with client side framerworks as it's all javascript. 
-
+    
 [Full API Reference](https://expressjs.com/en/4x/api.html)
 
 ---
@@ -11,11 +11,11 @@
 - 7 methods: `express.json()`, `express.raw()`, `express.Router()`, `express.static()`, `express.text()`, `express.text()`, `express.urlencoded()`.  
 - 4 objects: `Apllication`, `Request`, `Response`, `Router`
     - each object has it's own properties and methods.
-- _Middleware functions_: Are functions that have access to the __request__ and __response__ object. Express has built in middleware but middleware also comes from 3rdaprty packes as well as custom middleware
-    - Execute any code
-    - Make the changes to the req/res objects
-    - end response cycle
-    - call next middleware in the stack
+- _Middleware functions_: Are functions that have access to the __request__ and __response__ object. Express has built in middleware but middleware also comes from 3rd aprty packes as well as custom middleware
+    - Execute any code.
+    - Make the changes to the req/res objects.
+    - end response cycle.
+    - call next middleware in the stack.
 
 # You will often use Express for:
 - __Static file servers__: Express.js can be used to serve static files, such as HTML, CSS, JavaScript, and images, to clients. This is often used to build simple static websites or to serve the frontend of a web application.
