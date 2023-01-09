@@ -2,7 +2,8 @@
     - Fast unopinionated and minimalist web framework for NodeJS.
     - Server-side / backend framework.
     - Great to use with client side framerworks as it's all javascript. 
-[full API Reference](https://expressjs.com/en/4x/api.html)
+
+[Full API Reference](https://expressjs.com/en/4x/api.html)
 
 ---
 
@@ -17,21 +18,21 @@
     - call next middleware in the stack
 
 # You will often use Express for:
-- Static file servers: Express.js can be used to serve static files, such as HTML, CSS, JavaScript, and images, to clients. This is often used to build simple static websites or to serve the frontend of a web application.
+- __Static file servers__: Express.js can be used to serve static files, such as HTML, CSS, JavaScript, and images, to clients. This is often used to build simple static websites or to serve the frontend of a web application.
 
-- Render templates: Express.js has built-in support for rendering templates, which allows you to generate dynamic HTML on the server and serve it to clients. This is often used to build dynamic web applications that rely on server-side rendering.
+- __Render templates__: Express.js has built-in support for rendering templates, which allows you to generate dynamic HTML on the server and serve it to clients. This is often used to build dynamic web applications that rely on server-side rendering.
 
-- JSON APIs: Express.js can be used to build APIs that return data in JSON format, which can be easily consumed by frontend applications. This is often used to build modern, client-side web applications that rely on data from a backend API.
+- __JSON APIs__: Express.js can be used to build APIs that return data in JSON format, which can be easily consumed by frontend applications. This is often used to build modern, client-side web applications that rely on data from a backend API.
 
-- Serving content in different languages or formats: Express.js can be used to serve content in different languages or formats based on the client's preferences or the request parameters.
+- __Serving content in different languages or formats__: Express.js can be used to serve content in different languages or formats based on the client's preferences or the request parameters.
 
-- Redirecting requests: Express.js can be used to redirect requests from one URL to another, either temporarily or permanently. This is often used to implement custom URLs or to handle legacy URLs.
+- __Redirecting requests__: Express.js can be used to redirect requests from one URL to another, either temporarily or permanently. This is often used to implement custom URLs or to handle legacy URLs.
 
-- Handling form submissions: Express.js can be used to handle form submissions and process the data submitted by the user. This is often used to build simple web applications or to integrate with third-party APIs.
+- __Handling form submissions__: Express.js can be used to handle form submissions and process the data submitted by the user. This is often used to build simple web applications or to integrate with third-party APIs.
 
-- Implementing authentication and authorization: Express.js can be used to implement authentication and authorization mechanisms, such as login and logout functionality, to control access to certain parts of an application.
+- __Implementing authentication and authorization__: Express.js can be used to implement authentication and authorization mechanisms, such as login and logout functionality, to control access to certain parts of an application.
 
-and much more like: Caching responses, Compressing responses, Serving static files from multiple directories, Implementing rate limiting, Implementing security measures ... 
+_and much more like_: Caching responses, Compressing responses, Serving static files from multiple directories, Implementing rate limiting, Implementing security measures ... 
 
 # Express Properties and methods:
 ## Application Object: 
@@ -87,7 +88,7 @@ example 2:
 app.use(express.static(path.join(__dirname, "public"), {index: "poiler.html"} ));
 ```
 
-### app.listen(port[, hostname][, backlog][, callback]):
+### `app.listen(port[, hostname][, backlog][, callback])`:
 This method binds and listens for connections on the specified host and port. It is equivalent to the following:
 ```js
 const server = http.createServer(app);
@@ -99,7 +100,7 @@ app.listen(3000, () => {
 });
 ```
 
-- ### app.on(event, listener):
+### `app.on(event, listener)`:
 This method is used to bind a listener function to an event emitted by the app. For example:
 ```js
 app.on('error', (err) => {
@@ -107,7 +108,7 @@ app.on('error', (err) => {
 });
 ```
 
-- ### app.engine(ext, callback):
+### `app.engine(ext, callback)`:
 This method is used to register the given template engine callback as middleware. The callback will be invoked for requests to the given file extension. For example:
 ```js
 app.engine('ejs', require('ejs').renderFile);
