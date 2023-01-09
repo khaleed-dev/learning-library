@@ -7,16 +7,6 @@
 
 ---
 
-# Express offers:
-- 7 methods: `express.json()`, `express.raw()`, `express.Router()`, `express.static()`, `express.text()`, `express.text()`, `express.urlencoded()`.  
-- 4 objects: `Apllication`, `Request`, `Response`, `Router`
-    - each object has it's own properties and methods.
-- _Middleware functions_: Are functions that have access to the __request__ and __response__ object. Express has built in middleware but middleware also comes from 3rd aprty packes as well as custom middleware
-    - Execute any code.
-    - Make the changes to the req/res objects.
-    - end response cycle.
-    - call next middleware in the stack.
-
 # You will often use Express for:
 - __Static file servers__: Express.js can be used to serve static files, such as HTML, CSS, JavaScript, and images, to clients. This is often used to build simple static websites or to serve the frontend of a web application.
 
@@ -33,6 +23,16 @@
 - __Implementing authentication and authorization__: Express.js can be used to implement authentication and authorization mechanisms, such as login and logout functionality, to control access to certain parts of an application.
 
 _and much more like_: Caching responses, Compressing responses, Serving static files from multiple directories, Implementing rate limiting, Implementing security measures ... 
+
+# Express offers:
+- 7 methods: `express.json()`, `express.raw()`, `express.Router()`, `express.static()`, `express.text()`, `express.text()`, `express.urlencoded()`.  
+- 4 objects: `Apllication`, `Request`, `Response`, `Router`
+    - each object has it's own properties and methods.
+- _Middleware functions_: Are functions that have access to the __request__ and __response__ object. Express has built in middleware but middleware also comes from     3rd aprty packes as well as custom middleware:
+    - Execute any code.
+    - Make the changes to the req/res objects.
+    - end response cycle.
+    - call next middleware in the stack.
 
 # Express Properties and methods:
 ## Application Object: 
