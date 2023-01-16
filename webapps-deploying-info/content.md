@@ -1,4 +1,4 @@
-# some options for different types of applications and the corresponding deployment methods, classified as easy, medium, or hard:
+### What kind of web application deployment method should you use?
 
 ## If you have a simple HTML, CSS, JavaScript website, you can use:
 - Easy: GitHub Pages or other static website hosting services. This method is easy because it does not require any server-side configuration and the hosting service will handle the deployment for you.
